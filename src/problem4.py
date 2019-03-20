@@ -3,8 +3,8 @@ Exam 1, problem 4.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Maddie Sorensen.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -53,6 +53,27 @@ def run_test_problem4():
 
 
 def problem4(point1, point2, n, window):
+    point1.attach_to(window)
+    point2.attach_to(window)
+    x1=point1.x
+    y1=point1.y
+    x2=point2.x
+    y2=point2.y
+    dx=abs(x1-x2)/(n*2+1)
+    dy=abs(y1-y2)/(n*2+1)
+    window.render()
+    for k in range (n):
+        pointa=rg.Point(x1+dx*(k+1),y1+dy*(k+1))
+        pointa.attach_to(window)
+        pointa.fill_color=point2.fill_color
+        window.render()
+    for m in range (n):
+        pointb=rg.Point(x2-dx*(m+1),y2-dy*(m+1))
+        pointb.attach_to(window)
+        pointb.fill_color=point1.fill_color
+        window.render()
+
+
     """
     See   problem4_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
@@ -80,7 +101,7 @@ def problem4(point1, point2, n, window):
       :type window:  rg.RoseWindow
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # IMPORTANT: For PARTIAL CREDIT, ignore the colors.
     # -------------------------------------------------------------------------
