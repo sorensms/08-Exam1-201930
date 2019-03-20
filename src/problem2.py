@@ -3,8 +3,8 @@ Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Maddie Sorensen.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -15,7 +15,7 @@ def main():
 def test_factor_sum():
     """ Tests the   factor_sum   function. """
     ###########################################################################
-    #  TODO: 2. Implement this TEST function, as follows:
+    #  Done: 2. Implement this TEST function, as follows:
     #
     #    1. Read the  doc-string of the   factor_sum   function defined below.
     #
@@ -41,6 +41,45 @@ def test_factor_sum():
     print('Testing the   factor_sum   function:')
     print('---------------------------------------------------------')
 
+    #Test 1
+    expected = 9
+    actual = factor_sum(10)
+    print()
+    print( 'Test 1 of factor_sum:')
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    # Test 2
+    expected = 9
+    actual = factor_sum(16)
+    print()
+    print('Test 2 of factor_sum:')
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    # Test 3
+    expected = 3
+    actual = factor_sum(11)
+    print()
+    print('Test 3 of factor_sum:')
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    # Test 4
+    expected = 4
+    actual = factor_sum(25)
+    print()
+    print('Test 4 of factor_sum:')
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    # Test 5
+    expected = 11
+    actual = factor_sum(28)
+    print()
+    print('Test 5 of factor_sum:')
+    print('Expected:', expected)
+    print('Actual:  ', actual)
     ###########################################################################
     # WRITE YOUR TESTS BELOW HERE:
     ###########################################################################
@@ -78,3 +117,4 @@ def factor_sum(n):
     ###########################################################################
     # DO NOT modify the above line of code!
     ###########################################################################
+main()
